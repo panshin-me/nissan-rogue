@@ -1,0 +1,96 @@
+<!-- Gallery -->
+<link rel="stylesheet" href="assets/photoswipe/dist/photoswipe.css" />
+<div class="pswp-gallery pswp-gallery--single-column" id="gallery--getting-started">
+    {% for file in site.static_files %}
+    {% if file.path contains include.folder %}
+    {% if file.extname == '.jpg' or
+    file.extname == '.jpeg' or
+    file.extname == '.JPG' or
+    file.extname == '.JPEG' %}
+
+    {% assign filenameparts = file.path | split: "/" %}
+    {% assign filename = filenameparts | last | replace: file.extname,"" %}
+
+    <a href="{{ file.path }}" title="{{ filename }}">
+        <img src="//images.weserv.nl/?url=jekyllcodex.org/{{ file.path }}&w=300&h=300&output=jpg&q=50&t=square"
+            alt="{{ filename }}" />
+        <span>{{ filename }}</span>
+    </a>
+    <a href="https://unsplash.com"
+        data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg" data-pswp-width="2500"
+        data-pswp-height="1666" target="_blank">
+        <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg" alt="" />
+    </a>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+</div>
+{% if site.locale and site.locale != "" and site.locale != nil %}
+<section class="page-section" id="{{ site.data.sitetext[site.locale].gallery.section | default: " gallery" }}">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].gallery.title | default:
+                    "Services" }}</h2>
+                {% if site.data.sitetext[site.locale].gallery.text %}
+                <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].gallery.text }}</h3>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="row text-center">
+            {% for service in site.data.sitetext[site.locale].gallery.list %}
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="{{ service.icon | default: " fas fa-shopping-cart" }} fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="service-heading">{{ service.title | markdownify }}</h4>
+                {% if service.desc %}<div class="text-muted">{{ service.desc | markdownify }}</div>{% endif %}
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+{% else %}
+<section class="page-section" id="{{ site.data.sitetext.gallery.section | default: " gallery" }}">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">{{ site.data.sitetext.gallery.title | default: "Services" }}
+                </h2>
+                {% if site.data.sitetext.gallery.text %}
+                <h3 class="section-subheading text-muted">{{ site.data.sitetext.gallery.text }}</h3>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="row text-center">
+            {% for service in site.data.sitetext.gallery.list %}
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="{{ service.icon | default: " fas fa-shopping-cart" }} fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="service-heading">{{ service.title | markdownify }}</h4>
+                {% if service.desc %}<div class="text-muted">{{ service.desc | markdownify }}</div>{% endif %}
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+{% endif %}
+<script type="module">
+    import PhotoSwipeLightbox from 'assets/photoswipe/photoswipe-lightbox.esm.js';
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: '{{ site.data.sitetext[site.locale].gallery.section | default: "gallery" }}',
+        children: 'a',
+        pswpModule: () => import('assets/photoswipe/dist/photoswipe.esm.js')
+    });
+    lightbox.init();
+</script>
+<!-- End Gallery -->
