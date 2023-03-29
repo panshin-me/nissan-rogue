@@ -19,5 +19,7 @@ en: &DEFAULT_EN
       section: gallery
     - title: "Features"
       section: features
+    - title: "Contact"
+      section: contact
 en-US:
   <<: *DEFAULT_EN
