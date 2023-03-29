@@ -1,59 +1,100 @@
 <!-- Services -->
-{% if site.locale and site.locale != "" and site.locale != nil %}
-  <section class="page-section" id="{{ site.data.sitetext[site.locale].services.section | default: "services" }}">
-    <div class="container">
-	
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].services.title | default: "Services" }}</h2>
-          {% if site.data.sitetext[site.locale].services.text %}
-		  <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].services.text }}</h3>
-		  {% endif %}
-        </div>
-      </div>
-	  
-      <div class="row text-center">
-	  {% for service in site.data.sitetext[site.locale].services.list %}
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="{{ service.icon | default: "fas fa-shopping-cart" }} fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">{{ service.title | markdownify }}</h4>
-          {% if service.desc %}<div class="text-muted">{{ service.desc | markdownify }}</div>{% endif %}
-        </div>
-	  {% endfor %}
-      </div>
-	  
-    </div>
-  </section>
-{% else %}
-<section class="page-section" id="{{ site.data.sitetext.services.section | default: "services" }}">
+<section class="bg-light page-section" id="{{ site.data.sitetext[site.locale].keyFeatures.section | default: " key-features" }}">
   <div class="container">
 
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">{{ site.data.sitetext.services.title | default: "Services" }}</h2>
-        {% if site.data.sitetext.services.text %}
-    <h3 class="section-subheading text-muted">{{ site.data.sitetext.services.text }}</h3>
-    {% endif %}
+        <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].keyFeatures.title | default:
+          "Key Features" }}</h2>
+        {% if site.data.sitetext[site.locale].keyFeatures.text %}
+        <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].keyFeatures.text }}</h3>
+        {% endif %}
       </div>
     </div>
-  
+
     <div class="row text-center">
-  {% for service in site.data.sitetext.services.list %}
+      {% for service in site.data.sitetext[site.locale].keyFeatures.list %}
       <div class="col-md-4">
         <span class="fa-stack fa-4x">
           <i class="fas fa-circle fa-stack-2x text-primary"></i>
-          <i class="{{ service.icon | default: "fas fa-shopping-cart" }} fa-stack-1x fa-inverse"></i>
+          <i class="{{ service.icon | default: " fas fa-shopping-cart" }} fa-stack-1x fa-inverse"></i>
         </span>
         <h4 class="service-heading">{{ service.title | markdownify }}</h4>
         {% if service.desc %}<div class="text-muted">{{ service.desc | markdownify }}</div>{% endif %}
       </div>
-  {% endfor %}
+      {% endfor %}
     </div>
-  
+
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-4 portfolio-item">
+        <img class="img-fluid" src="assets/img/features/features.jpeg" alt="">
+      </div>
+      <div class="col-md-8 col-sm-8 portfolio-item">
+        <div class="portfolio-caption">
+          <ul class="text-muted">
+            <li>
+              2.5-litre DOHC 16-valve 4-cylinder engine
+            </li>
+            <li> Eco Mode
+            </li>
+            <li> Xtronic CVT® (Continuously Variable Transmission)
+            </li>
+            <li> Intuitive All-Wheel Drive
+            </li>
+            <li> Active Trace Control, Active Engine Braking, Active Ride Control
+            </li>
+            <li> LED Daytime Running Lights
+            </li>
+            <li> Roof rails
+            </li>
+            <li> Power heated outside mirrors with LED turn signal indicators
+            </li>
+            <li> Advanced Drive-Assist® Display
+            </li>
+            <li> NissanConnectSM with Mobile Apps
+            </li>
+            <li> Bluetooth® Hands-Free Phone System and *SiriusXM® Satellite Radio1,2
+            </li>
+            <li> AM/FM/CD audio system with 5.0" colour display
+            </li>
+            <li> Divide-N-Hide® Cargo System
+            </li>
+            <li> EZ Flex® Seating System with 2nd-row split folding/sliding/reclining
+              bench seat with pass-through
+            </li>
+            <li> Nissan Advanced Airbag System
+            </li>
+            <li> Tire Pressure Monitoring System (TPMS) with individual tire pressure display and
+              Easy-Fill Tire Alert
+            </li>
+            <li>17" x 7.0" aluminum-alloy wheels
+            <li> Dual Panoramic Moonroof</li>
+            </li>
+            <li> Auto-on/off headlights
+            </li>
+            <li> Fog lights
+            </li>
+            <li> Rear privacy glass
+            </li>
+            <li> Nissan Intelligent Key® with Push Button Ignition </li>
+            <li> 6-way power driver's seat with power lumbar
+            </li>
+            <li> Quick Comfort® heated front seats
+            </li>
+            <li> Retractable cargo cover
+            </li>
+            <li> Six speakers </li>
+          </ul>
+          <div class="font-weight-lighter">
+            *1XM® and SiriusXM® Satellite Radio is available in the 10 Canadian provinces and the 48 contiguous United
+            States. Basic monthly subscription required
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-{% endif %}
+
 <!-- End Services -->

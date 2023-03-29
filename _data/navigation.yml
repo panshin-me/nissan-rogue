@@ -13,17 +13,11 @@ en: &DEFAULT_EN
   nav:
     - title: "Details"
       section: details
+    - title: "Key Features"
+      section: key-features
     - title: "Gallery"
       section: gallery
     - title: "Features"
       section: features
-    - title: "Timeline"
-      section: timeline
-    - title: "Team"
-      section: team
-    - title: "Contact"
-      section: contact
-    - title: "Theme Source"
-      url: https://github.com/raviriley/agency-jekyll-theme/
 en-US:
   <<: *DEFAULT_EN
