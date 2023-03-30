@@ -15,9 +15,9 @@
 url    : "" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 
-title      : 2015 Nissan Rouge SV AWD For Sale!
+title      : 2015 Nissan Rogue SV AWD For Sale!
 email      : info@nissan-rouge2015.com #this is also the email contact forms will go to
-description: "Details of our 2015 Nissan Rouge SV AWD for sale."
+description: "Details of our 2015 Nissan Rogue SV AWD for sale."
 author     : Yuri
 phone      : (787) 898-3122
 # logo:     #optional, defaults to site title
