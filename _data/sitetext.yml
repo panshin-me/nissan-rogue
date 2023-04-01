@@ -12,7 +12,7 @@
 en: &DEFAULT_EN
   header:
     title: For Sale!
-    text: 2015 Nissan Rogue SV
+    text: 2015 Nissan Rogue AWD SV
     button: Tell Me More
     buttonlink: "#details"
 
