@@ -19,11 +19,32 @@ en: &DEFAULT_EN
   about:
     title: "Details"
     text: ""
-    body: "This reliable and efficient vehicle has only had one owner and has been **well-maintained** with regular oil changes and tune-ups.
-The exterior of the car is a beautiful **cayenne red** color and has been kept clean with regular washing and waxing. The interior is equally impressive, featuring comfortable and supportive **Charcoal cloth** seats that have been regularly cleaned and conditioned.
-Under the hood, you'll find a 2.5-liter DOHC 16-valve four-cylinder engine that provides smooth acceleration and impressive fuel economy, averaging around 8 litter pe 100 killometers on the highway. 
+    body: "
+    * **Well-maintained**<br>
+This well-maintained vehicle has only had one owner, with regular oil changes and tune-ups by certifyed technicians. 
+
+* **Color**<br>
+Beautiful unique cayenne red color exterior and has been kept clean with frequent washing and waxing. 
+
+ * **Interior**<br>
+The interior is equally impressive, featuring comfortable and supportive Charcoal cloth seats that have been regularly cleaned and conditioned. 
+
+ * **Engine**<br>
+Under the hood, you'll find a 2.5-liter DOHC 16-valve four-cylinder engine that provides smooth acceleration and impressive fuel economy - averaging around 8 litter per 100 kilometers on the highway. 
+
+ * **Safety features**<br>
 The car has also been outfitted with a suite of safety features, including a rearview camera, anti-lock brakes, and stability control. 
-This car has been a pleasure to drive and is perfect for anyone in the market for a reliable and efficient vehicle. It has a clean title and is ready for a new owner to take it on the road."
+
+ * **Clean Title and Ready to go**<br>
+This car has been a pleasure to drive and is perfect for anyone in the market for a reliable and efficient vehicle. It has a clean title and is ready for a new owner to take it on the road.
+
+ * **GTA Location**<br>
+The car is located in Great Toronto Area
+
+ * **Price**<br>
+Please <a href=\"#contact\">Contact us</a> for the price and additional details.
+"
+
     section: details
 
   keyFeatures:
